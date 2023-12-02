@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 
-const dayFolder = `./day-${new Date().getDate()}`;
+let dayFolder = `./day-${new Date().getDate()}`;
 const templateFolder = './template_day';
 
 ( async ()=>{
@@ -16,6 +16,10 @@ const templateFolder = './template_day';
 		const ans = await askQuestion("folder " + dayFolder + " already exists. Are you sure you want to reset its contents?")
 		if(ans.includes("y"))
 			folder()
+		if(ans.includes("n")){
+			dayFolder = `./day-${new Date().getDate()+1}`;
+			folder()
+		}
 	}
 })()
 

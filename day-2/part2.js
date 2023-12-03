@@ -25,7 +25,6 @@ exports.getSolution = function (input = "") {
 				}
 				if (dice.indexOf("green") > -1) {
 					let num = parseInt(dice.substring(0, dice.split(" ")[0]))
-					console.log(dice);
 					if (num > greenMax)
 						greenMax = num
 				}

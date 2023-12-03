@@ -1,5 +1,6 @@
 exports.getSolution = function (input = "") {
-	const lines = input.split('\n')
+	const fixed = input.replace("\r","")
+	const lines = fixed.split('\n')
 	let solution
 
 

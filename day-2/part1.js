@@ -25,14 +25,11 @@ exports.getSolution = function (input = "") {
 				}
 				if (dice.indexOf("green") > -1) {
 					let num = parseInt(dice.substring(0, dice.split(" ")[0]))
-					console.log(dice);
 					if (num > greenMax)
 						greenMax = num
 				}
 			}
 		}
-		console.log(line);
-		console.log("red: "+redMax,"Blue: "+blueMax,"Green: "+greenMax);
 		if (redMax <= 12 && greenMax <= 13 && blueMax <= 14) {
 			solution += id
 		}

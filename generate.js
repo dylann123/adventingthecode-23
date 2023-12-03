@@ -18,6 +18,7 @@ const templateFolder = './template_day';
 			folder()
 		if(ans.includes("n")){
 			dayFolder = `./day-${new Date().getDate()+1}`;
+			fs.mkdirSync(dayFolder);
 			folder()
 		}
 	}
@@ -39,7 +40,7 @@ function folder() {
 		console.log(stderr);
 	});
 
-	console.log(`./day-${new Date().getDate()} created`);
+	console.log(`${dayFolder} created`);
 }
 
 function askQuestion(query) {

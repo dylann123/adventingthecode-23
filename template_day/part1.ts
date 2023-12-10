@@ -3,7 +3,5 @@ exports.getSolution = function (input = "") {
 	const lines = fixed.split('\n')
 	let solution
 
-
-
 	return solution || "Incomplete"
 }

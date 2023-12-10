@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 const { exec } = require('child_process');
 
-let dayFolder = `./day-${new Date().getDate()}`;
+let dayFolder = `./day-a${new Date().getDate()}`;
 const templateFolder = './template_day';
 
 ( async ()=>{
@@ -17,7 +17,7 @@ const templateFolder = './template_day';
 		if(ans.includes("y"))
 			folder()
 		if(ans.includes("n")){
-			dayFolder = `./day-${new Date().getDate()+1}`;
+			dayFolder = `./day-a${new Date().getDate()+1}`;
 			fs.mkdirSync(dayFolder);
 			folder()
 		}
